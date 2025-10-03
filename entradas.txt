@@ -1,20 +1,12 @@
-contador1
-https://github.com
--45.67
+contador1 https://github.com -45.67
 -0.99
 ##invalid
 123.456
 123-456-7890
-test@mail.com
-mi_var
-##invalid
-mi_var
+test@mail.com mi_var
+##invalid mi_var
 123-456-7890
 +1-800-555-0199
-https://sub.dominio.org/test
-123
-www.ejemplo.net
-palabra#invalida
-555 123 4567
+https://sub.dominio.org/test 123 www.ejemplo.net palabra#invalida 555 123 4567
 -45
 123.456

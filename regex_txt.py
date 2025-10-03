@@ -24,23 +24,23 @@ def validar_entrada(entrada: str) -> str:
 
 def procesar_archivo(archivo_entrada: str, archivo_salida: str):
     with open(archivo_entrada, "r", encoding="utf-8") as f:
-        lineas = f.readlines()
+        contenido = f.read()
+
+    # Separar por espacios y saltos de línea
+    tokens = contenido.split()
 
     resultados = []
-    for linea in lineas:
-        texto = linea.strip()
-        if not texto:  # salto
-            continue
-        tipo = validar_entrada(texto)
-        resultados.append(f"{texto} → {tipo}")
+    for token in tokens:
+        tipo = validar_entrada(token)
+        resultados.append(f"{token} → {tipo}")
 
-    # Guardar en archivo de salida
+    # Guardar resultados en archivo
     with open(archivo_salida, "w", encoding="utf-8") as f:
         for r in resultados:
             f.write(r + "\n")
 
-    print("Análisis completado. Resultados guardados en:", archivo_salida)
+    print("✅ Análisis completado. Resultados guardados en:", archivo_salida)
 
-# Ejecutar
+# Ejemplo de uso
 if __name__ == "__main__":
     procesar_archivo("entradas.txt", "salida.txt")
